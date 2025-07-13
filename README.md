@@ -45,7 +45,10 @@ Vulnerability results are stored in the pipeline job artifacts as gl-sast-report
 
 <img width="749" height="347" alt="image" src="https://github.com/user-attachments/assets/b0cd6542-41e6-4522-950d-18ee8bbfdcdd" />
 
-Summary of Key Findings
+### Summary of Key Findings
+
+📥 Download the full [Raw JSON Report](gl-sast-report.json)
+
 
 ## 📊 SAST Scan Summary (GitLab Semgrep)
 
