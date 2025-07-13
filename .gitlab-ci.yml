@@ -1,0 +1,31 @@
+image: node:24
+include:
+  - template: Security/SAST.gitlab-ci.yml
+
+stages:
+  - install-stage
+  - test
+  - run-stage
+
+install-job:
+  stage: install-stage 
+  tags:
+    - My-HP-Windows-Runner
+  script:
+    - npm install
+    - echo "Installing dependencies"
+  artifacts:
+    paths:
+      - node_modules/
+    expire_in: 1 hour
+
+
+run-job:
+  tags:
+    - My-HP-Windows-Runner
+  stage: run-stage 
+  script:
+    - echo "Running app on http://localhost:3000"
+    - nohup node app.js > /dev/null 2>&1 &
+  dependencies:
+    - install-job
