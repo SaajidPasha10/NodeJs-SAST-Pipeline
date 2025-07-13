@@ -14,6 +14,8 @@
 
 ## 🛠️ Tool Used
 
+Custom local runner is used its documentation can be found here [Runner Setup](RUNNER_setup.md)
+
 This project uses **GitLab's built-in SAST scanner** through the GitLab CI/CD pipeline.
 
 - Template included: `Security/SAST.gitlab-ci.yml`
